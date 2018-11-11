@@ -52,26 +52,17 @@ const Login = (props) => {
 
         </Grid>
       </Grid>
-      <Grid
-        item
-        sm={8}
-        direction="row"
-        spacing={8}
-        justify="center"
-        alignItems="center"
-      >
-        Signin
+      <Grid itemsm={8} direction="row" spacing={8} justify="center" alignItems="center">
     <Grid
           item
           sm={6}
-          xs={12}
-        >
-          <Card className={scss.card}>
-            <div style={{ color: '#FF8A38', fontSize: '2em' }}>
+          xs={12}>
+
+          <div style={{ color: '#FF8A38', fontSize: '2em'}}>
               Sign In
                </div>
-            <div>
-              <CardContent>
+          <Card className={scss.card}>
+              <CardContent  >
                 <TextField
                   label="Email Address"
                   fullWidth
@@ -85,43 +76,16 @@ const Login = (props) => {
               </CardContent>
               <CardActions className={scss['login-actions']}>
                 <Button href="/login" color="primary" variant="raised">Login</Button>
-                <Link to="/Register" >
-                  <Button fullWidth color="secondary" variant="raised"style={{ textDecoration:'none'}}>Create an account</Button>
-                  </Link>
+
+                <Link to="/Register" style={{ textDecoration:'none' }}>
+                  <Button fullWidth color="secondary" variant="raised">Create an account</Button>
+                </Link>
+                
                 <Button href="/forgot-password">Forgot Password</Button>
               </CardActions>
-            </div>
           </Card>
         </Grid>
       </Grid>
-      {/* </Grid>
-    </Grid>
-      {/* <Grid item sm={10} xs={12} className={scss.panel}>
-        <Grid direction={panelDirection} container spacing={8}>
-          {/* <Grid
-            item
-            sm={6}
-            xs={12}
-          >
-            <Card className={classNames(scss.card, classes['primary-card'])}>
-              <CardContent className={scss['signup-content']}>
-                <img src={logoImage} className={scss['signup-logo']} alt="logo" />
-                <Typography variant="headline" component="h2" gutterBottom>
-                  Portal Admin Panel
-                </Typography>
-                <Typography component="p" gutterBottom>
-                  Welcome to our admin panel. Please login using the form or register for a new account using the button below.
-                </Typography>
-                <Typography component="p" gutterBottom>
-                  Portal is an amazing and easy to use Admin template. If you have any questions feel free to contact us in our support forum.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button fullWidth href="/register" color="secondary" variant="raised">Create an account</Button>
-              </CardActions>
-            </Card>
-          </Grid> */}
-      {/* */}
     </Grid>
   );
 };
