@@ -31,8 +31,7 @@ const Login = (props) => {
 
     <Grid item sm={10} xs={12} className={scss.panel}>
       <Grid direction={panelDirection} container spacing={0}>
-        <Grid
-          style={{ height: '500px', width: '300px' }}>
+        <Grid item sm={6}  xs={12}>
           <Card className={classNames(scss.card)} style={{ backgroundImage: `url(${signinimg} )` }}>
             {/* <img src={signinimg} alt="fjifj"/> */}
           </Card>
@@ -41,12 +40,13 @@ const Login = (props) => {
           item
           sm={6}
           xs={12}>
-          <Card className={scss.card}>
-            <div style={{ color: '#FF8A38', fontSize: '2em' }}>
+          <div style={{ color: '#FF8A38', fontSize: '2em' }}>
               Sign In
                </div>
-            <div>
-              <CardContent>
+          <Card className={scss.card}>
+           
+           
+              <CardContent  >
                 <TextField
                   label="Email Address"
                   fullWidth
@@ -60,12 +60,14 @@ const Login = (props) => {
               </CardContent>
               <CardActions className={scss['login-actions']}>
                 <Button href="/login" color="primary" variant="raised">Login</Button>
-                <Link to="/Register" >
-                  <Button fullWidth color="secondary" variant="raised"style={{ textDecoration:'none'}}>Create an account</Button>
-                  </Link>
+
+                <Link to="/Register" style={{ textDecoration:'none' }}>
+                  <Button fullWidth color="secondary" variant="raised">Create an account</Button>
+                </Link>
+                
                 <Button href="/forgot-password">Forgot Password</Button>
               </CardActions>
-            </div>
+           
           </Card>
         </Grid>
       </Grid>
