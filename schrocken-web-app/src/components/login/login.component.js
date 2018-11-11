@@ -16,6 +16,7 @@ import { withStyles } from '@material-ui/core/styles';
 import signinimg from '../../assets/images/bg-SignIn.png';
 import themeStyles from './login.theme.style';
 import scss from './login.module.scss';
+import { Link } from 'react-router-dom';
 
 const Login = (props) => {
   const {
@@ -59,7 +60,9 @@ const Login = (props) => {
               </CardContent>
               <CardActions className={scss['login-actions']}>
                 <Button href="/login" color="primary" variant="raised">Login</Button>
-                <Button fullWidth href="/register" color="secondary" variant="raised">Create an account</Button>
+                <Link to="/Register" >
+                  <Button fullWidth color="secondary" variant="raised"style={{ textDecoration:'none'}}>Create an account</Button>
+                  </Link>
                 <Button href="/forgot-password">Forgot Password</Button>
               </CardActions>
             </div>
