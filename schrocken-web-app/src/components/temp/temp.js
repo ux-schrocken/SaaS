@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Carousel from '../carousel2/carousel';
-import Dots from '../carousel2/indicator-dots';
-import Buttons from '../carousel2/buttons';
+var Carousel = require('react-responsive-carousel').Carousel;
+
 const styles = {
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -25,12 +24,34 @@ function ClassesNesting(props) {
 
     return (
         <div>
-             <Carousel loop auto axis={this.state.axis} widgets={[Dots, Buttons]} className="custom-class">
-          <p style={{backgroundColor: 'royalblue', height: '100%'}}>FRAME 1</p>
-          <p style={{backgroundColor: 'orange', height: '100%'}}>FRAME 2</p>
-          <p style={{backgroundColor: 'orchid', height: '100%'}}>FRAME 3</p>
-        </Carousel>
-      
+            {/* <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
+                <div>
+                    <img src="assets/1.jpeg" />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="assets/2.jpeg" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Legend 3</p>
+                </div>
+                <div>
+                    <img src="assets/4.jpeg" />
+                    <p className="legend">Legend 4</p>
+                </div>
+                <div>
+                    <img src="assets/5.jpeg" />
+                    <p className="legend">Legend 5</p>
+                </div>
+                <div>
+                    <img src="assets/6.jpeg" />
+                    <p className="legend">Legend 6</p>
+                </div>
+            </Carousel> */}
+
+
     <Button
       classes={{
         root: classes.root, // class name, e.g. `classes-nesting-root-x`

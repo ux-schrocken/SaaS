@@ -35,24 +35,22 @@ const Register = (props) => {
       spacing={0}
       justify="center"
       alignItems="center"
-      className={classes.background}
+      // className={classes.background}
     >
 
       <Grid direction={panelDirection} container spacing={0}>
         <Grid item sm={6} xs={12} >
-          
-          <Card >
-            <Carousel/>
+
+          <Card style={{ height: '100%' }} >
+            <Carousel />
           </Card>
 
         </Grid>
-
-
         <Grid item sm={6} xs={12} >
-          <div>
+          <div style={{ color: '#892DFF', fontSize: '2em' , display:'center' }}>
             Sign Up for an Account
           </div>
-          <Card className={scss.card}>
+          <Card className={scss.card} style={{ height: '100%' }} >
             <CardContent>
               <Grid container>
                 <Grid item sm={6} xs={12}>
@@ -89,6 +87,8 @@ const Register = (props) => {
                 </Grid>
               </Grid>
             </CardContent>
+
+
             <Link to='/Temp'>
               <Button fullWidth href="/Temp" color="primary" variant="raised">Register</Button></Link>
           </Card>
