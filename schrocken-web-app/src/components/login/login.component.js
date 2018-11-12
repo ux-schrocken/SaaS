@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
-import classNames from 'classnames';
+// import classNames from 'classnames';
 
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -34,57 +34,52 @@ const Login = (props) => {
       container
       direction="coloumn"
       spacing={0}
-      // justify="center"
-      // alignItems="center"
       className={classes.background}
-      className={scss.maingrid}
-    >
+      className={scss.maingrid}>
+
       <Grid item direction="coloumn" sm={4} className={scss.sidebar} >
-        <img src={bgImage} className={scss.bgImg} />
-        <Grid item  sm={12} direction="coloumn" className={scss.sidebarContent}>
+        <div style={{ maxHeight: '100%' }}>
+          <img src={bgImage} className={scss.bgImg} style={{maxHeight:'inherit'}}/>
+        </div>
+
+        <Grid item sm={12} direction="coloumn" className={scss.sidebarContent}>
           <img src={require("../../assets/images/Schrocken-Logo-White@3x.png")} className={scss.schrockenLogo} />
-          
-            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h4>
-          
+          <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h4>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <br />
           <img src={require("../../assets/images/ic-hyperledger.png")} className={scss.hyperLogo} />
           <img src={require("../../assets/images/ic-blockchain.png")} className={scss.blockchainLogo} />
-
         </Grid>
       </Grid>
-      <Grid itemsm={8} direction="row" spacing={8} justify="center" alignItems="center">
-    <Grid
-          item
-          sm={6}
-          xs={12}>
 
-          <div style={{ color: '#FF8A38', fontSize: '2em'}}>
-              Sign In
-               </div>
-          <Card className={scss.card}>
-              <CardContent  >
-                <TextField
-                  label="Email Address"
-                  fullWidth
-                />
-                <TextField
-                  label="Password"
-                  fullWidth
-                  margin="normal"
-                  type="password"
-                />
-              </CardContent>
-              <CardActions className={scss['login-actions']}>
-                <Button href="/login" color="primary" variant="raised">Login</Button>
 
-                <Link to="/Register" style={{ textDecoration:'none' }}>
-                  <Button fullWidth color="secondary" variant="raised">Create an account</Button>
-                </Link>
-                
-                <Button href="/forgot-password">Forgot Password</Button>
-              </CardActions>
+      <Grid item sm={8} direction="row" spacing={8} justify="center" alignItems="center">
+        <Grid item sm={6} xs={12}>
+          <div style={{ color: '#FF8A38', fontSize: '2em' , display:'center' }}>Sign In</div>
+          <Card className={scss.card} >
+            
+            <CardContent  >
+              <TextField
+                label="Email Address"
+                fullWidth
+              />
+              <TextField
+                label="Password"
+                fullWidth
+                margin="normal"
+                type="password"
+              />
+            </CardContent>
+            
+            <CardActions className={scss['login-actions']}>
+              <Button href="/login" color="primary" variant="raised">Login</Button>
+              <Button href="/forgot-password">Forgot Password</Button>
+            </CardActions>
           </Card>
         </Grid>
+        <Link to="/Register" style={{ textDecoration: 'none' }}>
+          <Button color="secondary" variant="raised">Get Started</Button>
+        </Link>
       </Grid>
     </Grid>
   );

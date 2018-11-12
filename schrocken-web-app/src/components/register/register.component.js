@@ -17,7 +17,7 @@ import { withStyles } from '@material-ui/core/styles';
 import themeStyles from './register.theme.style';
 import scss from './register.module.scss';
 import { Link } from 'react-router-dom';
-
+import Carousel from '../../components/carousel/carousel';
 
 const Register = (props) => {
   const {
@@ -40,24 +40,18 @@ const Register = (props) => {
 
       <Grid direction={panelDirection} container spacing={0}>
         <Grid item sm={6} xs={12} >
-          <Card className={classNames(scss.card, classes['primary-card'])}>
-            <CardContent className={scss['signup-content']}>
-              <Typography variant="headline" component="h2" gutterBottom>
-                Register
-                </Typography>
-              <Typography component="p" gutterBottom>
-                Welcome It takes a couple of minutes to sign up for a free account. Just fill in your details to gain access the admin panel and view the dashboard. By creating an account, you agree to our Terms & Conditions and Privacy Policy.
-                </Typography>
-            </CardContent>
-            <CardActions>
-              <Link to='/' style={{ textDecoration: 'none' }}>
-                <Button fullWidth color="secondary" variant="raised">I'm already registered</Button></Link>
-            </CardActions>
+          
+          <Card >
+            <Carousel/>
           </Card>
+
         </Grid>
 
 
         <Grid item sm={6} xs={12} >
+          <div>
+            Sign Up for an Account
+          </div>
           <Card className={scss.card}>
             <CardContent>
               <Grid container>
