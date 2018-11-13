@@ -2,6 +2,7 @@
   "name": "schrocken",
   "version": "0.1.0",
   "private": true,
+   "homepage": "https://ux-schrocken.github.io/SaaS/",
   "dependencies": {
     "@material-ui/core": "^1.2.0",
     "@material-ui/icons": "^1.1.0",
@@ -45,7 +46,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
