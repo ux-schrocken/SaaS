@@ -38,9 +38,9 @@ const Login = (props) => {
       className={classes.background}
       className={scss.maingrid}>
 
-      <Grid item direction="coloumn" sm={4} className={scss.sidebar} >
+      <Grid item direction="column" sm={4} className={scss.sidebar} >
         <div style={{ maxHeight: '100%' }}>
-          <img src={bgImage} className={scss.bgImg} style={{maxHeight:'inherit'}}/>
+          <img src={bgImage} className={scss.bgImg} style={{ maxHeight: 'inherit' }} />
         </div>
 
         <Grid item sm={12} direction="coloumn" className={scss.sidebarContent}>
@@ -56,9 +56,9 @@ const Login = (props) => {
 
       <Grid item sm={8} direction="row" spacing={8} justify="center" alignItems="center">
         <Grid item sm={6} xs={12}>
-          <div style={{ color: '#FF8A38', fontSize: '2em' , display:'center' }}>Sign In</div>
+          <div style={{ color: '#FF8A38', fontSize: '2em', display: 'center' }}>Sign In</div>
           <Card className={scss.card} >
-            
+
             <CardContent  >
               <TextField
                 label="Email Address"
@@ -71,17 +71,17 @@ const Login = (props) => {
                 type="password"
               />
             </CardContent>
-            
+
             <CardActions className={scss['login-actions']}>
               <Button href="/login" color="primary" variant="raised">Login</Button>
               <Button href="/forgot-password">Forgot Password</Button>
             </CardActions>
           </Card>
         </Grid>
-        <Link to ="/ForgotPassword">
-        <a href="http://www.google.co.in">Forgot Password? </a></Link>
+        <Link to="/ForgotPassword">
+          <a href="http://www.google.co.in">Forgot Password? </a></Link>
         <Link to="/Register" style={{ textDecoration: 'none' }}>
-          
+
           <Buttonoverride   >Get Started</Buttonoverride>
         </Link>
       </Grid>
