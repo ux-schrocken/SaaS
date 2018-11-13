@@ -12,7 +12,7 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import slide1 from '../../assets/images/bg-Slide1.png';
 import slide2 from '../../assets/images/bg-Slide2.png';
 import slide3 from '../../assets/images/bg-Slide3.png';
-
+import './carousel.css';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
@@ -102,9 +102,12 @@ class SwipeableTextMobileStepper extends React.Component {
           {tutorialSteps.map((step, index) => (
             <div key={step.label}>
               {Math.abs(activeStep - index) <= 2 ? (
-                <img className={classes.img} src={step.imgPath} alt={step.label} />
-              ) : null}
 
+                <div className="container">
+                  <img className={classes.img} src={step.imgPath} alt={step.label} />
+                  <div class="centered" >Center<Button variant="outlined" color="secondary" className={classes.button} > Request for Demo </Button></div>
+                </div>
+              ) : null}
             </div>
           ))}
         </AutoPlaySwipeableViews>

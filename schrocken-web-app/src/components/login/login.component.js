@@ -13,12 +13,13 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
 import { withStyles } from '@material-ui/core/styles';
-
+import ButtonOverride from '../../components/Buttonoverride';
 import themeStyles from './login.theme.style';
 import scss from './login.module.scss';
 import { Link } from 'react-router-dom';
 
 import bgImage from '../../assets/images/bg-SignIn.png';
+import Buttonoverride from '../../components/Buttonoverride';
 
 const Login = (props) => {
   const {
@@ -77,13 +78,20 @@ const Login = (props) => {
             </CardActions>
           </Card>
         </Grid>
+        <Link to ="/ForgotPassword">
+        <a href="http://www.google.co.in">Forgot Password? </a></Link>
         <Link to="/Register" style={{ textDecoration: 'none' }}>
-          <Button color="secondary" variant="raised">Get Started</Button>
+          
+          <Buttonoverride   >Get Started</Buttonoverride>
         </Link>
       </Grid>
     </Grid>
   );
 };
+
+
+// style={{ width: '114px', height: '42px', borderRadius: '4px', backgroundColor: '#e36d38'}}
+
 
 Login.propTypes = {
   classes: PropTypes.shape({}).isRequired,
