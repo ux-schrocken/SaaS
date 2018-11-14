@@ -3,7 +3,7 @@ import './App.css';
 import { Route,NavLink,HashRouter} from "react-router-dom";
 
 import Login from './components/login/login.component';
-import Register from './components/registernolib/register';
+import Register from './components/registernolib/signup';
 import Temp from './components/temp/temp';
 import ForgotPassword from './components/forgot-password/ForgotPassword';
 class App extends Component {
