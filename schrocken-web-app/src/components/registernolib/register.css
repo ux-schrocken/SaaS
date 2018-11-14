@@ -18,11 +18,10 @@
 border-width: 2px;
 }
 
-.card{
+.card-reg{
     height: 90%;
     width:90%;
     padding: 35px ;
-    margin: 40px;
     position: relative;
     border-color: black;
     box-shadow: 0px 2px 7px #acacac;
@@ -60,7 +59,7 @@ border-width: 2px;
     color: #969598;
   }
 
-  .submit-button{
+  .submit-button1{
     width: fit-content;
     height: 40px;
     border-radius: 5px;

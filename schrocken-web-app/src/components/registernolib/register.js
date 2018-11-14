@@ -18,28 +18,23 @@ class Register extends Component {
                     Just enter details and verify your account.
                    
                 </div>
-                <div className='card'>
+                <div className='card-reg'>
                     <div style={{ color: '#8D9293', fontSize: '1em' }}>Email Address</div>
                     <input className='email-input' ></input>
                     <div style={{ color: '#8D9293', fontSize: '1em', marginTop:'20%' }}>Password</div>
                     <input className='password-input' type='password' ></input>
                     <input type='checkbox'></input>
-                    <div fontSize='1em' color='#969598'>I am not interested in updates about Schrocken products and services. <a href="">Privacy Policy.</a></div>
-                    
-                    <button className='submit-button' onClick={this.buttonSubmit}>Continue</button>
-
-                    
+                    <div fontSize='1em' color='#969598'>I am not interested in updates about Schrocken products and services. <a href="">Privacy Policy.</a></div>   
+                    <button className='submit-button1' onClick={this.buttonSubmit}>Continue</button>
                 </div>
-                
                 </div> 
         }
         else {
             cardSwitcher =
                 <div>
-
+                
                 </div>
         }
-
         return (
             <div >
                 <div className='primary-grid'>
