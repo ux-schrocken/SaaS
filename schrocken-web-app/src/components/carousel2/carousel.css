@@ -1,0 +1,24 @@
+/* For demo */
+/* @import 'antd/dist/antd.css'; */
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    /* height: 100%; */
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide img {
+    color: #fff;
+  }
+
+  .textfloat{
+ position: relative;
+    text-align: center;
+    color: white;
+  }
+  .textcentered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

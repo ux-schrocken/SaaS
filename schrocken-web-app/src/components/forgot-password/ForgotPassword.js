@@ -27,10 +27,11 @@ class ForgotPassword extends Component {
         } else {
             switchcard =
                 <div className='card'>
-                <div style={{ color: '#8D9293', fontSize: '1em' }}>Email Address</div>
+                <div style={{ color: '#8D9293', fontSize: '1em' }} >Email Address
+                </div>
                 <div className='input-button-align'>
                     <input className='email-input' ></input>
-                    <button className='submit-button' onClick={this.buttonSubmit}>Continue</button></div>
+                    <button className='submitbuttonfpass' onClick={this.buttonSubmit}>Continue</button></div>
             </div>
         }
 
@@ -38,11 +39,15 @@ class ForgotPassword extends Component {
         return (
             <div >
                 <div className='box'>
-                    <div>
-                        <img src={require("../../assets/images/Schrocken-Logo@3x.png")} style={{ maxHeight: '100px', maxWidth:'auto' }} /></div>
+                    <div >
+                        <img src={require("../../assets/images/Schrocken-Logo@3x.png")} className='brandimg' />
+                    </div>
+
                     <div
-                        style={{ marginTop: '5%', fontSize: '2.5em', color: '#498FE2' }}> Forgot Password </div>
-                    <div style={{ color: '#8D9293', marginTop: '1%' }}>Enter your email address below and we will get you back on track.</div>
+                    className='headingfpass'> Forgot Password </div>
+                    <div
+                        style={{ color: '#8D9293', marginTop: '1%' }}>Enter your email address below and we will get you back on track.
+                    </div>
 
                     {switchcard}
 
@@ -54,7 +59,7 @@ class ForgotPassword extends Component {
                             <Link to='/Register'>
                             <button href='/Register' className='getstarted-button'>Get Started</button></Link>
                     </div>
-                    <div style={{ marginBottom:'2%' }}>
+                    <div className='copyrightfpass'>
                         &#169; 2018 Schrocken Pvt. Ltd <a href="">Terms</a> <a href="">Privacy</a>
                     </div>
                 </div>

@@ -1,0 +1,230 @@
+.primary-grid{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.carousel-box{
+   width:400px;
+    border-color: brown;
+}
+
+.brandingsup{
+  display: none;
+}
+
+.signup-box{
+    width:'100%';
+    height:'100%';
+    margin:5% ;
+    border-color: aqua;
+}
+
+
+
+.heading{
+ font-size: 2.5em;
+ color:#498FE2;
+}
+
+.cardreg{
+    margin-top:5%;
+    height:40vh;
+    width:auto;
+    padding: 40px ;
+    /* margin: 40px; */
+    position: relative;
+    border-color: black;
+    box-shadow: 0px 1px 10px 3px #D4D2D6;
+    /* box-shadow: 0px 1px 7px #acacac; */
+    border-radius: 5px;
+    display: inline-block;
+    background-size: 100%;
+  }
+
+  .emailreg{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-self: center;
+    margin-top: 10px;
+    box-shadow: 0px 0px 2px 1px #cacaca;
+    border-width: 0ch;
+    border-radius: 2px;
+    outline: none;
+    font-size: 20px;
+    color: #969598;
+  }
+
+  .passwordreg{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-self: center;
+    margin-top: 2%;
+    box-shadow: 0px 0px 2px 1px #cacaca;
+    border-width: 0ch;
+    border-radius: 2px;
+    outline: none;
+    font-size: 20px;
+    color: #969598;
+  }
+
+  .submitbuttonreg{
+     width: fit-content;
+    height: 50px;
+    border-radius: 5px;
+    /* box-shadow: 0px 1px 10px #cacaca; */
+    background-color: #498FE2;
+    margin-top: 4%;
+    padding: 0px 10px 0px 10px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none; 
+
+      }
+
+      .signinreg{
+        width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: #E36E39;
+  margin-left: 20px;
+  padding: 0px 10px 0px 10px;
+  color: #E36E39;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+      }
+
+      .lastdiv{
+        margin-top:10%;
+      }
+
+      .copyrightreg{
+bottom: 1px;
+color: #8D9293;
+font-size: 0.9em;
+position: absolute;
+
+      }
+   
+      /* -----------------------------MOBILE VIEW--------------------------------- */
+@media screen and (max-width: 500px) {
+        
+    .primary-grid{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .carousel-box{
+      display: none;
+    }
+
+.brandingsup{
+  max-height: 100px;
+  max-width: auto;
+}
+    
+    .signup-box{
+        width:'100%';
+        height:'100%';
+        /* margin:5%; */
+        /* margin: 0%; */
+
+        border-color: aqua;
+    }
+    
+    .heading{
+      font-size: 1.5em;
+      color:#498FE2;
+      text-align: center;
+     }
+
+    .cardreg{
+        margin-top:3%;
+        height:60vh;
+        width:auto;
+        padding: 30px ;
+        /* margin: 40px; */
+        position: relative;
+        border-color: black;
+        box-shadow: 0px 1px 10px 3px #D4D2D6;
+        /* box-shadow: 0px 1px 7px #acacac; */
+        border-radius: 5px;
+        display: inline-block;
+        background-size: 100%;
+      }
+    
+      .emailreg{
+        display: flex;
+        width: 100%;
+        height: 30px;
+        align-self: center;
+        margin-top: 2%;
+        box-shadow: 0px 0px 2px 1px #cacaca;
+        border-width: 0ch;
+        border-radius: 2px;
+        outline: none;
+        font-size: 20px;
+        color: #969598;
+      }
+    
+      .passwordreg{
+        display: flex;
+        width: 100%;
+        height: 30px;
+        align-self: center;
+        margin-top: 2%;
+        box-shadow: 0px 0px 2px 1px #cacaca;
+        border-width: 0ch;
+        border-radius: 2px;
+        outline: none;
+        font-size: 20px;
+        color: #969598;
+      }
+    
+      .submitbuttonreg{
+        /* width: 100px;
+        height: fit-content;
+        border-radius: 5px;
+        box-shadow: 0px 2px 10px #cacaca;
+        background-color: #498FE2;
+        margin-top: 4%;
+        padding: 0px 10px 0px 10px;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        outline: none; */
+      }
+
+      .signinreg{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: #E36E39;
+        margin-left: 20px;
+        padding: 0px 10px 0px 10px;
+        color: #E36E39;
+        font-size: 1em;
+        font-weight: bold;
+        outline: none;
+      }
+      .lastdiv{
+        margin-top:10%;
+        text-align: center;
+      }
+
+      .copyrightreg{
+        color: #8D9293;
+        font-size: 0.9em;
+        text-align: center;
+        bottom: 1px;
+        position: inherit;
+              }
+
+}
