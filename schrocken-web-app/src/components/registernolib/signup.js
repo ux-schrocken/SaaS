@@ -10,12 +10,15 @@ class Register extends Component {
             isActivationSent: false,
         }
     }
+    buttonSubmit = () => {
+        this.setState({ isActivationSent: true })
+    }
     render() {
         let cardSwitcher;
         if (this.state.isActivationSent === false) {
             cardSwitcher =
                 <div >
-                    <div style={{ color: '#8D9293', marginTop: '1%' }}>
+                    <div style={{ color: '#8D9293', marginTop: '5%' }}>
                         Just enter details and verify your account.
                 </div>
                     <div className='cardreg'>
@@ -23,7 +26,10 @@ class Register extends Component {
                         <input className='emailreg' ></input>
                         <div style={{ color: '#8D9293', fontSize: '1em', marginTop: '5%' }}>Password</div>
                         <input className='passwordreg' type='password' ></input>
-                        <div fontSize='1em' color='#969598' ><input type='checkbox'></input> &nbsp;   I am not interested in updates about Schrocken products and services. <a href="">Privacy Policy.</a>
+
+                        <div style={{ fontSize: '1em', color: '#969598', marginTop: '20px' }} ><input type='checkbox' >
+
+                        </input> &nbsp;   I am not interested in updates about Schrocken products and services. <a href="">Privacy Policy.</a>
                             <br /><br />   By clicking "Continue" I agree to <a href="">Our Terms and Service.</a>
                         </div>
                         <Button style={{ height: '40px', marginTop: '5%' }} type='primary' onClick={this.buttonSubmit}>Continue</Button>
@@ -32,7 +38,19 @@ class Register extends Component {
         }
         else {
             cardSwitcher =
-                <div>
+                <div >
+                    <div style={{ color: '#89CE3A', marginTop: '5%' }}>
+                        Thank You! We are all set now.
+        </div>
+                    <div className='cardreg'>
+                        {/* <input className='emailreg' ></input> */}
+                        <div style={{ fontSize: '1.3em', color: '#969598' }} >
+                            We just sent you an activation email. Activate your account now for an instant access.
+                        </div>
+                        <div style={{ fontSize: '1em', color: '#969598', marginTop: '5%'}}> Please note that all activation emails will expire in 24 hours. You have to sign up again, if deactivated.</div>
+
+                        <Button style={{ height: '40px', marginTop: '5%', backgroundColor: '#E36E39', color: 'white' }} onClick={this.buttonSubmit}>Continue</Button>
+                    </div>
 
                 </div>
         }
@@ -49,7 +67,7 @@ class Register extends Component {
                     > Sign Up for An Account
                     </div>
                     <div
-                        style={{ color: '#8D9293', marginTop: '2%' }}>Get started with a Schrocken Account.
+                        style={{ color: '#8D9293', marginTop: '0.5%' }}>Get started with a Schrocken Account.
                             </div>
                     {cardSwitcher}
                     <div className='lastdiv' >

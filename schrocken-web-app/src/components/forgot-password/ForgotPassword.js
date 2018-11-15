@@ -34,8 +34,7 @@ class ForgotPassword extends Component {
                     <button className='submitbuttonfpass' onClick={this.buttonSubmit}>Continue</button></div>
             </div>
         }
-
-
+        
         return (
             <div >
                 <div className='box'>

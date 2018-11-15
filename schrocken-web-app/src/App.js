@@ -9,9 +9,8 @@ import ForgotPassword from './components/forgot-password/ForgotPassword';
 class App extends Component {
   render() {
     return (
-      <div  >
-        {/* <Register/> */}
-        {/* <Login /> */}
+   
+    
         <HashRouter >
           <div  >
             <ul style={{ listStyleType:'none'}}>
@@ -30,7 +29,7 @@ class App extends Component {
             </div>
           </div>
         </HashRouter>
-      </div>
+      
     );
   }
 }
