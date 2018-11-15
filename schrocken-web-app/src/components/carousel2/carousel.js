@@ -27,6 +27,7 @@ class CarouselEffect extends Component {
             <img
               src={require("../../assets/images/bg-Slide3.png")}
               style={{ maxHeight: '100vh', maxWidth: 'auto' }} />
+            
           </div>
         </Carousel>
       </div>

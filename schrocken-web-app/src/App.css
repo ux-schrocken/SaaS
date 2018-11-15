@@ -1,6 +1,10 @@
-/* .App {
- height: 100vh;
-} */
+
+html,
+body {
+  margin: 0;
+  /* padding-top: -5px; */
+  height: 100%;
+}
 /* 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
