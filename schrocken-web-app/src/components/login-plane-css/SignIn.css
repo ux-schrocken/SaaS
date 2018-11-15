@@ -78,7 +78,7 @@
     vertical-align: middle;
   }
   .remember +label{
-    font-size: 0.8em;
+    /* font-size: 0.8em; */
     color: #B1B1B1;
 
   }
@@ -94,7 +94,7 @@
       border: 0;
       width: 20%;
       border-radius: 5px;
-      margin-bottom: 4%;
+      margin-bottom: 2%;
   }
   
   .other-options{
@@ -130,7 +130,7 @@
     color: #4FA4ED
   }
   .footer{
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: 0.8em;
     color: #A4A4A4;
 
@@ -146,13 +146,16 @@
       }
       .signincontainer{
           width: 90%;
-        margin-left: 10%;
+        margin: 10%;
       }
       .signinheading p {
         font-size: 0.9em;
     }
     .card-container {
         margin-top: 10%;
+    }
+    .signincard{
+        width: 90%
     }
     .repeat-block {
         padding-top: 4%;

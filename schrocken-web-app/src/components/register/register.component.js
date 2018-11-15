@@ -17,7 +17,7 @@ import { withStyles } from '@material-ui/core/styles';
 import themeStyles from './register.theme.style';
 import scss from './register.module.scss';
 import { Link } from 'react-router-dom';
-import Carousel from '../../components/carousel/carousel';
+// import Carousel from '../../components/carousel/carousel';
 
 const Register = (props) => {
   const {
