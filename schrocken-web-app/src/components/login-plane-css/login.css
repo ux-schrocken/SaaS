@@ -1,0 +1,81 @@
+
+.sidebar{
+    width: 30%;
+    height:inherit;
+    display: inline-block;
+    vertical-align: text-top;
+    position: relative;
+  }
+
+.sidebarcontent{
+    display: inline-block;
+    color: white
+  }
+.content{
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+
+
+  .bgImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     z-index: -5;
+  }
+
+  .sidebar h4{
+    font-weight: 600;
+      line-height: 1.6em;
+      font-size: 1.25em;
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+  .sidebar p{
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: #D8DCEA 
+  }
+  .schrockenLogo{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 50%;
+    height: 10%;
+  }
+  .hyperLogo{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    width: 50%;
+    height: 10%; 
+  }
+  .blockchainLogo{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    width: 50%;
+    height: 10%; 
+  }
+  
+  .techimages{
+    margin-top: 15%;
+    font-size: 0.8em;
+    color: #D8DCEA ;
+  }
+  .techimages img{
+      display: block;
+  }
+  .requestbutton{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+  @media only screen and (max-width:599px){
+    .sidebar{
+        display: none
+    }
+}

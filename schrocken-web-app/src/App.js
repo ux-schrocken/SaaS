@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route,NavLink,HashRouter} from "react-router-dom";
 
-import Login from './components/login/login.component';
+// import Login from './components/login/login.component';
+import Login from './components/login-plane-css/login';
+
 import Register from './components/register/register.component';
 import Temp from './components/temp/temp';
 import ForgotPassword from './components/forgot-password/ForgotPassword';
@@ -14,7 +16,7 @@ class App extends Component {
         {/* <Login /> */}
         <HashRouter >
           <div  >
-            <ul style={{ listStyleType:'none'}}>
+            <ul style={{ listStyleType:'none',margin:"0"}}>
               <li><NavLink to="/" ></NavLink></li>
               <li><NavLink to="/Register"></NavLink></li>
               <li><NavLink to="/Temp"></NavLink></li>
