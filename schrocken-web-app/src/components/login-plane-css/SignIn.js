@@ -1,46 +1,52 @@
 import React, { Component } from 'react';
 import './SignIn.css';
 import { Link } from 'react-router-dom';
-import { preventDefault } from 'fullcalendar';
 
 
 class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            type:"password",
             emailInputClicked: false,
-            passwordInputClicked:false,
+            passwordInputClicked: false,
             rememberMe: false,
             showPassword: false,
         }
     }
 
-    togglePassword = () => {
-        var passwordInputClicked=true;
+    togglePassword = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        // var passwordInputClicked = true;
         var showPassword = this.state.showPassword;
         this.setState({
-            showPassword:!showPassword,
-            passwordInputClicked:passwordInputClicked
-
+            showPassword: !showPassword,
+            // passwordInputClicked: passwordInputClicked,
         });
-        //    alert(showPassword)
+        //    alert(passwordInputClicked)
     }
-    emailInputClicked=()=>{
-        var passwordInputClicked=this.state.passwordInputClicked;
-        if(passwordInputClicked){this.setState({passwordInputClicked: !passwordInputClicked}) }
-        var emailInputClicked=!this.state.emailInputClicked;
-        this.setState({emailInputClicked})
+    emailInputClicked = (event) => {
+
+        // var passwordInputClicked = this.state.passwordInputClicked;
+        // if (passwordInputClicked) { this.setState({ passwordInputClicked: !passwordInputClicked }) }
+        var emailInputClicked = !this.state.emailInputClicked;
+        this.setState({ emailInputClicked })
     }
-    passwordInputClicked=()=>{
-        var emailInputClicked=this.state.emailInputClicked;
-        if(emailInputClicked){this.setState({emailInputClicked: !emailInputClicked}) }
-        var passwordInputClicked=!this.state.passwordInputClicked;
-        this.setState({passwordInputClicked})
+    passwordInputClicked = (event) => {
+        // event.preventDefault();
+        // event.stopPropagation();
+        // var emailInputClicked = this.state.emailInputClicked;
+        // if (emailInputClicked) { this.setState({ emailInputClicked: !emailInputClicked }) }
+        var passwordInputClicked = !this.state.passwordInputClicked;
+        this.setState({ passwordInputClicked })
+        // alert(passwordInputClicked)
     }
     render() {
-        var  showPassword=this.state.showPassword;
-        var emailInputClicked=this.state.emailInputClicked;
-        var passwordInputClicked= this.state.passwordInputClicked
+        var showPassword = this.state.showPassword;
+        var emailInputClicked = this.state.emailInputClicked;
+        var passwordInputClicked = this.state.passwordInputClicked;
+
         return (
             <div className="signin">
                 <div className="signincontainer">
@@ -54,26 +60,31 @@ class SignIn extends Component {
                         <div className="signincard block">
                             <div className="repeat-block">
                                 <label className={emailInputClicked ? "label-active block" : "label block"} >Email</label>
-                                <input  className={emailInputClicked ? "input input-active  block" : "input block"} onClick={this.emailInputClicked}/>
+                                <input type="text" className="input block" onFocus={this.emailInputClicked} onBlur={this.emailInputClicked} />
                             </div>
                             <div className="repeat-block">
                                 <label className={passwordInputClicked ? "label-active block" : "label block"}>Password</label>
-
-                                {showPassword ? (
-                                <div>
-                                <input className={passwordInputClicked ? "input-active input block" : "input block"} onClick={this.passwordInputClicked}/>
-                                <img src={require("../../assets/images/eye-closed.png")} onClick={this.togglePassword}/>
-                                </div>)
-                                : (
-                                <div>
-                                <input className={passwordInputClicked ? "input-active input block" : "input block"} type="password" onClick={this.passwordInputClicked}/>
-                                <img src={require("../../assets/images/eye-open.png")} onClick={this.togglePassword}/>
+                                <div className={passwordInputClicked ? "input block bottom":"input block"}  >
+                                <input type={showPassword? "text" : "password"} className="input-password" onFocus={this.passwordInputClicked} onBlur={this.passwordInputClicked} />
+                                <img src={showPassword ?
+                                    (require("../../assets/images/eye-closed.png"))
+                                    : (require("../../assets/images/eye-open.png"))
+                                } onClick={this.togglePassword}  className="show-icon" />
                                 </div>
+                                {/* {showPassword ? (
+                                    <div className="input block" onFocus={this.passwordInputClicked} onBlur={this.passwordInputClicked}>
+                                        <input type="text" className="input-password" />
+                                        <img src={require("../../assets/images/eye-closed.png")} onClick={this.togglePassword} className="show-icon" />
+                                    </div>
                                 )
+                                    : (
+                                        <div className="input block" onFocus={this.passwordInputClicked} onBlur={this.passwordInputClicked}>
+                                            <input type="password" className="input-password" />
+                                            <img src={require("../../assets/images/eye-open.png")} onClick={this.togglePassword} className="show-icon" />
+                                        </div>
+                                    )
+                                } */}
 
-                                   
-                                }
-                                {/* <img src={require("../../assets/images/eye.png")} onClick={this.togglePassword} /> */}
                             </div>
 
                             <input type="radio" value="Remember Me" id="remember" className="remember label" /><label for="remember">Remember me</label>
