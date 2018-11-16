@@ -5,9 +5,35 @@
     /* flex-direction: row; */
   /* margin-top:0%; */
 }
-/* ul {
+
+.bannerwhite{
+  position: fixed;
+  width:250px;
+  top: 3em;
+  left: 30px;
+}
+.request-demo-button{
+  display: inline-block;
+  box-shadow: none;
+  border-width: 2px;
+  border-radius: 7px;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1.1em;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+
+  position: fixed;
+  bottom: 6em;
+  left: 100px;
+  
+}
+ul {
   margin-top: none;
-} */
+}
 .carousel-box{
    width:400px;
     border-color: brown;
@@ -37,7 +63,7 @@
 .cardreg{
     margin-top:2%;
     height:inherit;
-    width:inherit;
+    width:700px;
     padding: 40px ;
     /* margin: 40px; */
     position: relative;
@@ -92,18 +118,33 @@
 
       }
 
+      .continuebutton{
+        margin-top: 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: whitesmoke;
+        background-color: #F46422;
+        box-sizing: 0;
+        box-shadow: none;
+        border: 0;
+        width: 20%;
+        border-radius: 5px;
+        margin-bottom: 2%;
+    }
+
       .signinreg{
-        width: 100px;
-  height: 40px;
-  border-radius: 5px;
-  border-width: 3px;
-  border-color: #E36E39;
-  margin-left: 20px;
-  padding: 0px 10px 0px 10px;
-  color: #E36E39;
-  font-size: 1em;
-  font-weight: bold;
-  outline: none;
+        display: inline-block;
+        box-shadow: none;
+        border-width: 2px;
+        border-radius: 7px;
+        padding: 5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 1.1em;
+        border-color: #F46422;
+        color: #F46422;
       }
 
       .lastdiv{
@@ -118,6 +159,7 @@ bottom: 10px;
 position: fixed;
       }
    
+      
       /* -----------------------------MOBILE VIEW--------------------------------- */
 @media only screen and (max-width: 500px) {
         
@@ -202,19 +244,19 @@ margin-right: auto;
         color: #969598;
       }
     
-      .submitbuttonreg{
-        /* width: 100px;
-        height: fit-content;
-        border-radius: 5px;
-        box-shadow: 0px 2px 10px #cacaca;
-        background-color: #498FE2;
+      .continuebutton{
         margin-top: 4%;
-        padding: 0px 10px 0px 10px;
-        color: white;
-        font-size: 1em;
-        font-weight: bold;
-        outline: none; */
-      }
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: whitesmoke;
+        background-color: #F46422;
+        box-sizing: 0;
+        box-shadow: none;
+        border: 0;
+        width: 80px;
+        border-radius: 5px;
+        margin-bottom: 2%;
+    }
 
       .signinreg{
         width: 100px;

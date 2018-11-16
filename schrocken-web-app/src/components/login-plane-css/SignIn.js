@@ -9,38 +9,38 @@ class SignIn extends Component {
         super(props);
         this.state = {
             emailInputClicked: false,
-            passwordInputClicked:false,
+            passwordInputClicked: false,
             rememberMe: false,
             showPassword: false,
         }
     }
 
     togglePassword = () => {
-        var passwordInputClicked=true;
+        var passwordInputClicked = true;
         var showPassword = this.state.showPassword;
         this.setState({
-            showPassword:!showPassword,
-            passwordInputClicked:passwordInputClicked
+            showPassword: !showPassword,
+            passwordInputClicked: passwordInputClicked
 
         });
         //    alert(showPassword)
     }
-    emailInputClicked=()=>{
-        var passwordInputClicked=this.state.passwordInputClicked;
-        if(passwordInputClicked){this.setState({passwordInputClicked: !passwordInputClicked}) }
-        var emailInputClicked=!this.state.emailInputClicked;
-        this.setState({emailInputClicked})
+    emailInputClicked = () => {
+        var passwordInputClicked = this.state.passwordInputClicked;
+        if (passwordInputClicked) { this.setState({ passwordInputClicked: !passwordInputClicked }) }
+        var emailInputClicked = !this.state.emailInputClicked;
+        this.setState({ emailInputClicked })
     }
-    passwordInputClicked=()=>{
-        var emailInputClicked=this.state.emailInputClicked;
-        if(emailInputClicked){this.setState({emailInputClicked: !emailInputClicked}) }
-        var passwordInputClicked=!this.state.passwordInputClicked;
-        this.setState({passwordInputClicked})
+    passwordInputClicked = () => {
+        var emailInputClicked = this.state.emailInputClicked;
+        if (emailInputClicked) { this.setState({ emailInputClicked: !emailInputClicked }) }
+        var passwordInputClicked = !this.state.passwordInputClicked;
+        this.setState({ passwordInputClicked })
     }
     render() {
-        var  showPassword=this.state.showPassword;
-        var emailInputClicked=this.state.emailInputClicked;
-        var passwordInputClicked= this.state.passwordInputClicked
+        var showPassword = this.state.showPassword;
+        var emailInputClicked = this.state.emailInputClicked;
+        var passwordInputClicked = this.state.passwordInputClicked
         return (
             <div className="signin">
                 <div className="signincontainer">
@@ -54,24 +54,24 @@ class SignIn extends Component {
                         <div className="signincard block">
                             <div className="repeat-block">
                                 <label className={emailInputClicked ? "label-active block" : "label block"} >Email</label>
-                                <input  className={emailInputClicked ? "input input-active  block" : "input block"} onClick={this.emailInputClicked}/>
+                                <input className={emailInputClicked ? "input input-active  block" : "input block"} onClick={this.emailInputClicked} />
                             </div>
                             <div className="repeat-block">
                                 <label className={passwordInputClicked ? "label-active block" : "label block"}>Password</label>
 
                                 {showPassword ? (
-                                <div>
-                                <input className={passwordInputClicked ? "input-active input block" : "input block"} onClick={this.passwordInputClicked}/>
-                                <img src={require("../../assets/images/eye-closed.png")} onClick={this.togglePassword}/>
-                                </div>)
-                                : (
-                                <div>
-                                <input className={passwordInputClicked ? "input-active input block" : "input block"} type="password" onClick={this.passwordInputClicked}/>
-                                <img src={require("../../assets/images/eye-open.png")} onClick={this.togglePassword}/>
-                                </div>
-                                )
+                                    <div>
+                                        <input className={passwordInputClicked ? "input-active input block" : "input block"} onClick={this.passwordInputClicked} />
+                                        <img src={require("../../assets/images/eye-closed.png")} onClick={this.togglePassword} />
+                                    </div>)
+                                    : (
+                                        <div>
+                                            <input className={passwordInputClicked ? "input-active input block" : "input block"} type="password" onClick={this.passwordInputClicked} />
+                                            <img src={require("../../assets/images/eye-open.png")} onClick={this.togglePassword} />
+                                        </div>
+                                    )
 
-                                   
+
                                 }
                                 {/* <img src={require("../../assets/images/eye.png")} onClick={this.togglePassword} /> */}
                             </div>
